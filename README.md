@@ -3,7 +3,7 @@
 
 
 
-This exercise involved modelling the London 'Boris Bikes' bike hire scheme using object oriented programming.  This code was built on design principles such as SOLID and DRY.  Test driven coding and pair programming was also utilised.
+This exercise involves modelling the London 'Boris Bikes' bike hire scheme using object oriented programming.  This code was built on design principles such as SOLID and DRY.  Test driven coding and pair programming was also utilised.
 
 Functionality
 -------------
