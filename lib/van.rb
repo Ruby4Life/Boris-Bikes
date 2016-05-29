@@ -28,6 +28,13 @@ class Van
 		end
 	end	
 
+	
+	def release_fixed_bikes_to(holder)
+		bikes.each do |fixed_bike|
+			release_bike(holder, fixed_bike)
+		end
+	end
+
 
 
 	private
