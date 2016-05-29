@@ -13,6 +13,10 @@ class Bike
 		self
 	end
 
+	def fixed!
+		@broken = false
+	end
+
 	
 
 end

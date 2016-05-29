@@ -6,10 +6,17 @@ require 'bike'
     expect(the_bike.broken?).to eq false
   end
 
-  it "bike breaks" do
+  it "bike can broken" do
     the_bike = Bike.new 
     the_bike.break!
     expect(the_bike.broken?).to eq true
+  end
+
+  it "bike can be fixed" do
+    the_bike = Bike.new
+    the_bike.break!
+    the_bike.fixed!
+    expect(the_bike.broken?).to eq false
   end
 
 
