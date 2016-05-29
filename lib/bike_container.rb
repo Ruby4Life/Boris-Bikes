@@ -26,5 +26,9 @@ module BikeContainer
     bikes.delete(bike)
   end
 
+  def full?
+    bike_count == capacity
+  end
+
   
 end
