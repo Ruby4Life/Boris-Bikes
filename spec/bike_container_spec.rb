@@ -17,6 +17,14 @@ describe BikeContainer do
     expect(holder.bike_count).to eq(1)
   end
 
+  it "should not release a bike when passed an argument that is not a bike at all" do
+    expect( lambda{holder.release(:dog)}).to raise_error("this is not a bike")
+  end
+
+   it "should not dock something that is not a bike" do
+    expect( lambda{holder.dock(:apple)}).to raise_error("this is not a bike")
+  end
+
   it "should release a bike" do
     holder.dock(bike)
     holder.release(bike)

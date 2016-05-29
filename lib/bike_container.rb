@@ -19,11 +19,15 @@ module BikeContainer
   end
 
   def dock(bike)
+    raise "nothing to dock" if bike == nil
+    not_bike(bike)
     raise "Station is full" if full?
     bikes << bike
   end
   
   def release(bike)
+    not_bike(bike)
+    raise "bike not specified" if bike == nil
     raise "bike not available" if !bike.broken? && available_bikes.count == 0
     bikes.delete(bike)
   end
@@ -44,6 +48,11 @@ module BikeContainer
   def broken_bikes
     bikes - available_bikes
   end
+
+  def not_bike(bike)
+    raise "this is not a bike" unless bike.is_a? Bike
+  end
+
 
 
 
