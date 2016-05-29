@@ -31,7 +31,7 @@ How to run it
 -------------
 Clone the repository:
 ```shell
-$ git clone git@github.com:.....
+$ git@github.com:Ruby4Life/Boris-Bikes.git
 ```
 
 Change directory:
