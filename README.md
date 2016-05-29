@@ -25,7 +25,7 @@ Testing
 -------
 Screenshot of test results from terminal:
 
-<!--screenshot  goes here-->
+![Screenshot](/images/Screenshot.png)
 
 How to run it
 -------------
