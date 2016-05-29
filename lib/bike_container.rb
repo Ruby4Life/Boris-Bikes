@@ -24,12 +24,23 @@ module BikeContainer
   end
   
   def release(bike)
+    raise "bike not available" if !bike.broken? && available_bikes.count == 0
     bikes.delete(bike)
   end
 
   def full?
     bike_count == capacity
   end
+
+  def available_bikes
+    bikes.reject(&:broken?)
+  end
+
+  def broken_bikes
+    bikes - available_bikes
+  end
+
+
 
   
 end

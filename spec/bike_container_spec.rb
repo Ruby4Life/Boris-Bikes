@@ -34,11 +34,13 @@ describe BikeContainer do
     expect(lambda { holder.dock(bike)}).to raise_error(RuntimeError)
   end
 
-  it "should release a bike" do
-    holder.dock(bike)
-    holder.release(bike)
-    expect(holder.bike_count).to eq(0)
+  it "should not release a bike that is not there" do
+    expect( lambda{holder.release(bike)}).to raise_error("bike not available")
   end
+  
+
+
+
 
   
 
