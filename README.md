@@ -19,6 +19,7 @@ Technologies used
 -----------------
 - Ruby
 - Rspec
+- IRB
 
 Testing
 -------
