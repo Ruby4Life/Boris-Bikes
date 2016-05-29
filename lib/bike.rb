@@ -9,7 +9,7 @@ class Bike
 	end
 
 	def break!
-		@broken = false
+		@broken = true
 		self
 	end
 
