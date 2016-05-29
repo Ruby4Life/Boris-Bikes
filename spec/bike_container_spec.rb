@@ -37,6 +37,14 @@ describe BikeContainer do
   it "should not release a bike that is not there" do
     expect( lambda{holder.release(bike)}).to raise_error("bike not available")
   end
+
+  it "should not release a bike when container holder is empty" do
+    holder.dock(bike)   
+    expect(holder.empty?).to be false
+    holder.release(bike)
+    expect(holder.empty?).to be true
+    expect(lambda { holder.release(bike)}).to raise_error("bike not available")
+  end
   
 
 

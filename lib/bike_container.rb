@@ -32,6 +32,11 @@ module BikeContainer
     bike_count == capacity
   end
 
+  def empty?
+    return false if bike_count > 0
+    return true if bike_count == 0
+  end
+
   def available_bikes
     bikes.reject(&:broken?)
   end
