@@ -22,6 +22,14 @@ class Van
 		end
 	end
 
+	def collect_fixed_bikes_from(holder)
+		holder.bikes.each do |fixed_bike|
+			collect_bike(holder, fixed_bike)
+		end
+	end	
+
+
+
 	private
 
 	def collect_bike(holder, bike)
