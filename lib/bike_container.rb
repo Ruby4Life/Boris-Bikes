@@ -14,6 +14,14 @@ module BikeContainer
     @capacity = value
   end
 
+  def bike_count
+    bikes.count
+  end
+
+  def dock(bike)
+     
+    @bikes << bike
+  end
 
 
   

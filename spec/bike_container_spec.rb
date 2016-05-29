@@ -10,7 +10,12 @@ describe BikeContainer do
   def fill_holder(holder)
     holder.capacity.times { holder.dock(Bike.new)}
   end
-
+  
+  it "should accept a bike" do  
+    expect(holder.bike_count).to eq(0)
+    holder.dock(bike)
+    expect(holder.bike_count).to eq(1)
+  end
 
 
   
